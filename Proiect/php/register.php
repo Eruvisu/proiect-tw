@@ -1,15 +1,17 @@
 <html>
 <head>
     <title>Registration</title>
+	<link rel="stylesheet" href="../css/styles.css">
+    <meta charset="UTF-8">
 </head>
 <body>
 
     <div class="container">
 
         <ul class="topbar">
-            <li class="topbar"><a class="topbar" href="php/login.php">Log In</a>
+            <li class="topbar"><a href="login.php">Log In</a>
             </li>
-            <li class="topbar"><a class="topbar" href="php/register.php">Register</a>
+            <li class="topbar"><a href="register.php">Register</a>
             </li>
         </ul>
 
@@ -45,15 +47,37 @@
 require_once("db_const.php");
 if (!isset($_POST['submit'])) {
 ?>  <!-- The HTML registration form -->
-    <form action="<?=$_SERVER['PHP_SELF']?>" method="post">
-        Username: <input type="text" name="username" /><br />
-        Password: <input type="password" name="password" /><br />
-        First name: <input type="text" name="first_name" /><br />
-        Last name: <input type="text" name="last_name" /><br />
-        Email: <input type="type" name="email" /><br />
-		Mobile number <input type="number" name="phone" /> <br/>
+    <form class="register_table" action="<?=$_SERVER['PHP_SELF']?>" method="post">
+		<table>
+			<tr>
+				<td> Username: </td>
+				<td> <input type="text" name="username" /><br /> <td>
+			</tr>
+			<tr>
+				<td> Password: </td> 
+				<td> <input type="password" name="password" /><br /> </td>
+			</tr>
+			<tr> 
+				<td> First name: </td>
+				<td> <input type="text" name="first_name" /><br /> </td>
+			</tr>
+			<tr>
+				<td> Last name: </td>
+				<td> <input type="text" name="last_name" /><br /> </td>
+			</tr>
+			<tr>
+				<td> Email: </td>
+				<td> <input type="type" name="email" /><br /> </td>
+			</tr>
+			<tr>
+				<td> Mobile number: </td>
+				<td> <input type="number" name="phone" /> <br/> </td>
+			</tr>
 
-        <input type="submit" name="submit" value="Register" />
+			<tr> 
+				<td> <input type="submit" name="submit" value="Register" /> </td>
+			</tr>
+		</table>
     </form>
 <?php
 } else {

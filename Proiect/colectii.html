@@ -3,7 +3,7 @@
 
 <head>
     <title>Colectii</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <meta charset="UTF-8">
 </head>
@@ -49,42 +49,6 @@
         </div>
 
         <article>
-
-          <div class="w3-content w3-display-container">
-            <img class="mySlides" src="images/640x392_91746_135735.jpg" style="width:100%">
-            <img class="mySlides" src="images/6825681904_9fcaf209cd_b.jpg" style="width:100%">
-            <img class="mySlides" src="images/a-collection-of-interesting-south-african-zulu-artefacts.jpg" style="width:100%">
-            <img class="mySlides" src="images/Artefacte.jpg" style="width:100%">
-            <img class="mySlides" src="images/Artefacte1.jpg" style="width:100%">
-            <img class="mySlides" src="images/Canopic_Jars.jpg" style="width:100%">
-            <img class="mySlides" src="images/collection-of-eighty-four-west-african-asante-gold-weights.jpg" style="width:100%">
-            <img class="mySlides" src="images/comaora pantera.jpg" style="width:100%">
-            <img class="mySlides" src="images/p02ng3pz.jpg" style="width:100%">
-
-            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-          </div>
-
-          <script>
-            var slideIndex = 1;
-            showDivs(slideIndex);
-
-              function plusDivs(n) {
-                showDivs(slideIndex += n);
-              }
-
-              function showDivs(n) {
-                var i;
-                var x = document.getElementsByClassName("mySlides");
-                if (n > x.length) {slideIndex = 1}
-                if (n < 1) {slideIndex = x.length}
-                for (i = 0; i < x.length; i++) {
-                  x[i].style.display = "none";
-              }
-              x[slideIndex-1].style.display = "block";
-            }
-        </script>
-
         </article>
 
         <footer>Copyright &copy; Proiect TW</footer>

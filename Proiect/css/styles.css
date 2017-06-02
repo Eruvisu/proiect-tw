@@ -1,5 +1,4 @@
 body {
-    
     background-color: #00004d;
 }
 div.container {
@@ -60,7 +59,7 @@ ul.topbar {
 }
 li.topbar {
     float: left;
-		text-shadow: 0 0 9px rgba(255,255,86,0.7) ;
+	text-shadow: 0 0 9px rgba(255,255,86,0.7) ;
 }
 a.topbar {
     display: block;
@@ -131,27 +130,14 @@ article {
 #title {
     text-align: left;
     margin-left: 80p;
-		font: italic normal bold 35px/normal "Palatino Linotype", "Book Antiqua", Palatino, serif;
-	  color: rgba(255,255,255,0.9);
-		text-shadow: 0 0 9px rgba(255,255,86,0.7);
+	font: italic normal bold 35px/normal "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color: rgba(255,255,255,0.9);
+	text-shadow: 0 0 9px rgba(255,255,86,0.7);
 }
 
 .error {color: #FF0000;}
 
-input{
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  border: none;
-  font: normal normal bold 20px/1 "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  color: rgba(66,53,53,1);
-  text-align: center;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  background: rgba(226,222,239,0.98);
-}
-
-.register_table{
+form.register_table{
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -163,4 +149,20 @@ input{
   text-overflow: ellipsis;
   background: rgba(241,196,15,0.6);
   border-radius: 14;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
+form.register_form input{
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	border: none;
+	font: normal normal bold 20px/1 "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color: rgba(66,53,53,1);
+	text-align: center;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	background: rgba(226,222,239,0.98);
+	
 }

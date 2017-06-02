@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>Login Form</title>
-	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="../css/styles.css">
     <meta charset="UTF-8">
 </head>
 <body>
@@ -9,9 +9,9 @@
     <div class="container">
 
 		<ul class="topbar">
-            <li class="topbar"><a class="topbar" href="php/login.php">Log In</a>
+            <li class="topbar"><a href="login.php">Log In</a>
             </li>
-            <li class="topbar"><a class="topbar" href="php/register.php">Register</a>
+            <li class="topbar"><a href="register.php">Register</a>
             </li>
         </ul>
 
@@ -49,11 +49,21 @@
 if (!isset($_POST['submit'])){
 ?>
 <!-- The HTML login form -->
-    <form action="<?=$_SERVER['PHP_SELF']?>" method="post">
-        Username: <input type="text" name="username" /><br />
-        Password: <input type="password" name="password" /><br />
+    <form class="register_table" action="<?=$_SERVER['PHP_SELF']?>" method="post">
+		<table>
+			<tr>
+				<td> Username: </td>
+				<td> <input type="text" name="username" /><br /> </td>
+			</tr>
+			<tr>
+				<td> Password: </td>
+				<td> <input type="password" name="password" /><br /> </td>
+			</tr>
 
-        <input type="submit" name="submit" value="Login" />
+			<tr>
+				<td> <input type="submit" name="submit" value="Login" /> </td>
+			</tr>
+		</table>
     </form>
 
 <?php
