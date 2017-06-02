@@ -1,0 +1,145 @@
+<?php
+session_start();
+require_once 'class.user.php';
+$user_login = new USER();
+
+if($user_login->is_logged_in()!="")
+{
+ $user_login->redirect('home.php');
+}
+
+if(isset($_POST['btn-login']))
+{
+ $email = trim($_POST['txtemail']);
+ $upass = trim($_POST['txtupass']);
+
+ if($user_login->login($email,$upass))
+ {
+  $user_login->redirect('home.php');
+ }
+}
+?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Log In</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <ul class="topbar">
+            <li class="topbar"><a class="topbar" href="Conectare.html">Sign In</a>
+            </li>
+            <li class="topbar"><a class="topbar" href="Înregistrare.html">Sign Up</a>
+            </li>
+        </ul>
+
+        <header>
+            <h1 id="title">ARTIFACTY</h1>
+
+        </header>
+
+        <nav class="sidebar">
+            <ul class="sidebar">
+                <li class="sidebar"><a class="sidebar" href="Home.html">Home</a>
+                </li>
+                <li class="sidebar"><a class="sidebar" href="Colectii.html">Colectii</a>
+                </li>
+                <li class="sidebar"><a class="sidebar" href="Statistici.html">Statistici</a>
+                </li>
+                <li class="sidebar"><a class="sidebar" href="Noutati.html">Noutati</a>
+                </li>
+                <li class="sidebar"><a class="sidebar" href="Recenzii.html">Recenzii</a>
+                </li>
+                <li class="sidebar"><a class="sidebar" href="Contact.html">Contact</a>
+                </li>
+                <li class="sidebar"><a class="sidebar" href="Import.html">Import</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="searchbar">
+            <input type="text" placeholder="Search...">
+            <input type="submit" value="Go">
+        </div>
+
+        <?php
+            if(isset($_GET['inactive'])){
+        ?>
+        <div class='alert alert-error'>
+            <button class='close' data-dismiss='alert'>&times;</button>
+            <strong>Sorry!</strong> This Account is not Activated Go to your Inbox and Activate it.
+        </div>
+        <?php
+            }
+        ?>
+        <form class="form-signin" method="post">
+        <?php
+            if(isset($_GET['error'])){
+        ?>
+        <div class='alert alert-success'>
+            <button class='close' data-dismiss='alert'>&times;</button>
+            <strong>Wrong Details!</strong>
+        </div>
+        <?php
+            }
+        ?>
+
+        <article>
+          <form>
+
+              <table class="register_table" align="center">
+
+                  <tr>
+                      <td colspan=2>
+                          <span><b>Log In</b></span>
+                      </td>
+                  </tr>
+
+                  <tr>
+                      <td>Email</td>
+                      <td>
+                          <input type="email" placeholder="Email address" name="txtemail" id="emailid" size="30" required />
+                      </td>
+                  </tr>
+
+                  <tr>
+                      <td>Password</td>
+                      <td>
+                          <input type="password" placeholder="Password" name="txtupass" id="password" size="30" required />
+                      </td>
+
+                  </tr>
+
+                  <tr>
+                      <td>
+                          <button type="reset">Reset</button>
+                      </td>
+                      <td colspan="2">
+                          <button type="submit" name="btn-login">Sign In</button>
+                          <a href="fpass.php">Lost your password? </a>
+                      </td>
+                  </tr>
+              </table>
+
+
+          </form>
+
+        </article>
+
+
+
+        <footer>Copyright &copy; Proiect TW</footer>
+
+    </div>
+    </div>
+
+</body>
+
+</html>

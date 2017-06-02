@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .error {color: #FF0000;}
+    </style>
+</head>
+<body>
+
+<form method = "post" action = "
+<?php
+    echo htmlspecialchars($_SERVER[ "PHP_SELF" ]);
+?>">
+
+<table cellpadding="2" width="20%" bgcolor="99FFFF" align="center"
+cellspacing="2">
+
+    <tr>
+        <td colspan=2>
+            <span style="font-size: medium; align-content: center"><b>Registration Form</b></span>
+        </td>
+    </tr>
+    <tr>
+        <td>First Name</td>
+        <td><input type="text" name=firstname id="firstname" size="30"></td>
+    </tr>
+
+    <tr>
+<td>Last Name</td>
+<td><input type="text" name="lastname" id="lastname" size="30"></td>
+</tr>
+
+
+<tr>
+<td>Gender</td>
+<td><input type="radio" name="Gender" value="male" size="10">Male
+<input type="radio" name="Gender" value="Female" size="10">Female</td>
+</tr>
+
+
+
+
+
+
+
+
+<tr>
+<td>Password</td>
+<td><input type="password" name="password" id="password" size="30"></td>
+
+</tr>
+
+<tr>
+    <td>Repeat password</td>
+    <td><input type="password" name="password" id="password" size="30"></td>
+</tr>
+
+
+<tr>
+<td>Email</td>
+<td><input type="text" name="emailid" id="emailid" size="30"></td>
+</tr>
+
+
+
+<tr>
+<td>Mobile Number</td>
+<td><input type="tel" name="mobileno" id="mobileno" size="30"></td>
+</tr>
+<tr>
+<td><input type="reset"></td>
+<td colspan="2"><input type="submit" value="Submit Form" /></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
