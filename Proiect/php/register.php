@@ -3,6 +3,44 @@
     <title>Registration</title>
 </head>
 <body>
+
+    <div class="container">
+
+        <ul class="topbar">
+            <li class="topbar"><a class="topbar" href="php/login.php">Log In</a>
+            </li>
+            <li class="topbar"><a class="topbar" href="php/register.php">Register</a>
+            </li>
+        </ul>
+
+        <header>
+            <h1 id="title">ARTIFACTY</h1>
+
+        </header>
+
+        <nav class="sidebar">
+            <ul class="sidebar">
+                <li class="sidebar"><a class="sidebar" href="../home.html">Home</a>
+                </li>
+                <li class="sidebar"><a class="sidebar" href="../colectii.html">Colectii</a>
+                </li>
+                <li class="sidebar"><a class="sidebar" href="../statistici.html">Statistici</a>
+                </li>
+                <li class="sidebar"><a class="sidebar" href="../noutati.html">Noutati</a>
+                </li>
+                <li class="sidebar"><a class="sidebar" href="../recenzii.html">Recenzii</a>
+                </li>
+                <li class="sidebar"><a class="sidebar" href="../contact.html">Contact</a>
+                </li>
+                <li class="sidebar"><a class="sidebar" href="../import.html">Import</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="searchbar">
+            <input type="text" placeholder="Search...">
+            <input type="submit" value="Go">
+        </div>
 <?php
 require_once("db_const.php");
 if (!isset($_POST['submit'])) {
@@ -65,5 +103,9 @@ if (!isset($_POST['submit'])) {
     }
 }
 ?>
+
+        <footer>Copyright &copy; Proiect TW</footer>
+
+    </div>
 </body>
 </html>

@@ -22,19 +22,19 @@
 
         <nav class="sidebar">
             <ul class="sidebar">
-                <li class="sidebar"><a class="sidebar" href="Home.html">Home</a>
+                <li class="sidebar"><a class="sidebar" href="../home.html">Home</a>
                 </li>
-                <li class="sidebar"><a class="sidebar" href="Colectii.html">Colectii</a>
+                <li class="sidebar"><a class="sidebar" href="../colectii.html">Colectii</a>
                 </li>
-                <li class="sidebar"><a class="sidebar" href="Statistici.html">Statistici</a>
+                <li class="sidebar"><a class="sidebar" href="../statistici.html">Statistici</a>
                 </li>
-                <li class="sidebar"><a class="sidebar" href="Noutati.html">Noutati</a>
+                <li class="sidebar"><a class="sidebar" href="../noutati.html">Noutati</a>
                 </li>
-                <li class="sidebar"><a class="sidebar" href="Recenzii.html">Recenzii</a>
+                <li class="sidebar"><a class="sidebar" href="../recenzii.html">Recenzii</a>
                 </li>
-                <li class="sidebar"><a class="sidebar" href="Contact.html">Contact</a>
+                <li class="sidebar"><a class="sidebar" href="../contact.html">Contact</a>
                 </li>
-                <li class="sidebar"><a class="sidebar" href="Import.html">Import</a>
+                <li class="sidebar"><a class="sidebar" href="../import.html">Import</a>
                 </li>
             </ul>
         </nav>
