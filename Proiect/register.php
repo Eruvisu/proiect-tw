@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>Registration</title>
-	<link rel="stylesheet" href="../css/styles.css">
+	<link rel="stylesheet" href="./css/styles.css">
     <meta charset="UTF-8">
 </head>
 <body>
@@ -44,7 +44,7 @@
             <input type="submit" value="Go">
         </div>
 <?php
-require_once("db_const.php");
+require_once('./php/db_const.php');
 if (!isset($_POST['submit'])) {
 ?>  <!-- The HTML registration form -->
     <form class="register_table" action="<?=$_SERVER['PHP_SELF']?>" method="post">

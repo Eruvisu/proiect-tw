@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>Login Form</title>
-	<link rel="stylesheet" href="../css/styles.css">
+	<link rel="stylesheet" href="./css/styles.css">
     <meta charset="UTF-8">
 </head>
 <body>
