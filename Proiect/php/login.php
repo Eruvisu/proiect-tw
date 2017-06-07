@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>Login Form</title>
-	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="../css/styles.css">
     <meta charset="UTF-8">
 </head>
 <body>
@@ -68,7 +68,7 @@ if (!isset($_POST['submit'])){
 
 <?php
 } else {
-    require_once("php/db_const.php");
+    require_once("db_const.php");
     $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
     # check connection
     if ($mysqli->connect_errno) {
