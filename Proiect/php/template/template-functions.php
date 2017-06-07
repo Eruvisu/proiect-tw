@@ -49,8 +49,8 @@ function do_topbar()
 function do_searchbar()
 {
     $searchbar='
-            <input type="text" placeholder="Search...">
-            <input type="submit" value="Go">';
+            <input name="artefact_name" placeholder="Introdu denumire...">
+            <a href="Cautare.php"><input name="commit" type="submit" value="Cauta"></a>;
     return $searchbar;
 }
 ?>
