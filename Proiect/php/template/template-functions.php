@@ -50,7 +50,7 @@ function do_searchbar()
 {
     $searchbar='
             <input name="artefact_name" placeholder="Introdu denumire...">
-            <a href="Cautare.php"><input name="commit" type="submit" value="Cauta"></a>;
+            <a href="Cautare.php"><input name="commit" type="submit" value="Cauta"></a>';
     return $searchbar;
 }
 ?>
