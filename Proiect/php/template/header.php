@@ -3,7 +3,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors','1');
 ?>
-<?php include('template-functions.php');?>
+<?php include_once('template-functions.php');?>
 <!DOCTYPE html>
 <html>
     <head>
