@@ -1,4 +1,5 @@
 body {
+    background-image:url("images/gradient.jpg");
     background-color: #00004d;
 }
 div.container {
@@ -7,9 +8,6 @@ div.container {
     border: 1px solid rgba(190,193,1,0.9);
     background-color: #ffd699;
     border-radius: 14px;
-}
-div.searchbar {
-    float: right;
 }
 input {
     background-color: #d0d0e1;
@@ -36,16 +34,17 @@ input[type="submit"]:hover {
 header {
     padding: 40px;
     color: #ffd699;
-    background-image:url("images/header.jpg");
+    background-image:url("images/back.jpg");
     background-size: cover;
     clear: left;
     text-align: center;
     border-radius: 14px;
 }
 footer {
-    padding: 0px;
-    color: #ffd699;
-    background-color: #202060;
+    padding: 2px;
+    color: black;
+	background-image:url("images/back.jpg");
+    background-color:#ffd699;
     clear: left;
     text-align: center;
 }
@@ -53,13 +52,13 @@ ul.topbar {
     list-style-type: none;
     margin: 0;
     overflow: hidden;
-    background-color: #202060;
+    background-color#202060;
     float: right;
     font-size: 1.05em;
 }
 li.topbar {
     float: left;
-	text-shadow: 0 0 9px rgba(255,255,86,0.7) ;
+		text-shadow: 0 0 9px rgba(255,255,86,0.7) ;
 }
 a.topbar {
     display: block;
@@ -73,9 +72,9 @@ a.topbar:hover {
     background-color: #a3a3c2;
 }
 nav.sidebar {
-    line-height: 30px;
+    line-height: 65px;
     background-color: #d0d0e1;
-    height: 480px;
+    height: 450p6;
     width: 130px;
     float: left;
     padding: 5px;
@@ -86,7 +85,7 @@ ul.sidebar {
     list-style-type: none;
     padding: 0;
     font-size: 1.40em;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 li.sidebar {
 		display: inline-block;
@@ -103,9 +102,9 @@ li.sidebar {
 	  color: rgba(255,255,255,0.9);
 	  -o-text-overflow: clip;
 	  text-overflow: clip;
-	  background: rgba(183,167,27,0.9);
-	  -webkit-box-shadow: 4px 4px 7px 2px rgba(0,0,0,0.2) inset;
-	  box-shadow: 4px 4px 7px 2px rgba(0,0,0,0.2) inset;
+	  background: #ffb366; 
+	  -webkit-box-shadow: 4px 4px 7px 2px rgba(183,167,27,0.9) inset;
+	  box-shadow: 4px 4px 7px 2px #ff944d inset;
 	  text-shadow: 0 0 9px rgba(255,255,86,0.7) ;
 	  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
 	  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
@@ -130,14 +129,27 @@ article {
 #title {
     text-align: left;
     margin-left: 80p;
-	font: italic normal bold 35px/normal "Palatino Linotype", "Book Antiqua", Palatino, serif;
-	color: rgba(255,255,255,0.9);
-	text-shadow: 0 0 9px rgba(255,255,86,0.7);
+		font: italic normal bold 35px/normal "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	  color: rgba(255,255,255,0.9);
+		text-shadow: 0 0 9px rgba(255,255,86,0.7);
 }
 
 .error {color: #FF0000;}
 
-form.register_table{
+input{
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none;
+  font: normal normal bold 20px/1 "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  color: rgba(66,53,53,1);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: rgba(226,222,239,0.98);
+}
+
+.register_table{
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -147,69 +159,34 @@ form.register_table{
   text-align: center;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  background: rgba(241,196,15,0.6);
+  background:#ffb366;
   border-radius: 14;
-  margin-left: 40%;
-  margin-right: 40%;
+  width:60%;
+  
 }
 
-form.register_form input{
-	-webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
-	box-sizing: content-box;
-	border: none;
-	font: normal normal bold 20px/1 "Palatino Linotype", "Book Antiqua", Palatino, serif;
-	color: rgba(66,53,53,1);
-	text-align: center;
-	-o-text-overflow: ellipsis;
-	text-overflow: ellipsis;
-	background: rgba(226,222,239,0.98);
-	
+tr{
+	  height: 50px;
 }
 
-div.gallery {
-    border: 1px solid #ccc;
+
+form.searchbar {
+    float: right;
 }
 
-div.gallery:hover {
-    border: 2px solid #577;
+div.searchbar {
+float: right;}
+
+#mainbody{
+  display:inline-block;
+  position:relative;
 }
 
-div.gallery img {
-    width: 100%;
-    height: auto;
+#recenzii_table{
+	text-align:center;
 }
 
-div.desc {
-    padding: 15px;
-    text-align: center;
-}
 
-* {
-    box-sizing: border-box;
-}
-
-.responsive {
-    padding: 0 6px;
-    float: left;
-    width: 24.99999%;
-}
-
-@media only screen and (max-width: 700px){
-    .responsive {
-        width: 49.99999%;
-        margin: 6px 0;
-    }
-}
-
-@media only screen and (max-width: 500px){
-    .responsive {
-        width: 100%;
-    }
-}
-
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
+h3{
+	text-align:center;
 }
