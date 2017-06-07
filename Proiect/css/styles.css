@@ -1,5 +1,5 @@
 body {
-    background-image:url("images/gradient.jpg");
+    background-image:url("../images/gradient.jpg");
     background-color: #00004d;
 }
 div.container {
@@ -34,7 +34,7 @@ input[type="submit"]:hover {
 header {
     padding: 40px;
     color: #ffd699;
-    background-image:url("images/back.jpg");
+    background-image:url("../images/back.jpg");
     background-size: cover;
     clear: left;
     text-align: center;
@@ -43,7 +43,7 @@ header {
 footer {
     padding: 2px;
     color: black;
-	background-image:url("images/back.jpg");
+	background-image:url("../images/back.jpg");
     background-color:#ffd699;
     clear: left;
     text-align: center;
