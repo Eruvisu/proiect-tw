@@ -65,7 +65,7 @@
 
 				while ($row = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
 
-				echo '<div class="responsive"><div class="gallery"><a target="_blank" href="'.$row['id_artefact'].'"><img src="'.$row['id_artefact'].'" width="300" height="200"></a><div class="desc">'.$row['id_artefact'].'</div></div></div>';
+				echo '<div class="responsive"><div class="gallery"><a target="_blank" href="'.$row['id_artefact'].'"><img src="'.$row['id_artefact'].'" width="300" height="200"></a><div class="desc">'.$row['artefact_name'].'</div></div></div>';
 													}
 
 			mysqli_close($con);
