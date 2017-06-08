@@ -47,7 +47,7 @@ session_start();
             <input type="submit" value="Go">
         </div>
 <?php
-require_once("../app/views/db_const.php");
+require_once("../app/db_const.php");
 if (!isset($_POST['submit'])) {
 ?>  <!-- The HTML registration form -->
     <form class="register_table" action="<?=$_SERVER['PHP_SELF']?>" method="post">
