@@ -29,7 +29,6 @@ return $title;
 function do_topbar()
 {
     $topbar='<ul class="topbar">';
-    
     if(isset($_SESSION['usr_id']))
     {
         $topbar.='

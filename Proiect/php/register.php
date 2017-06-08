@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
 <head>
     <title>Registration</title>
@@ -99,13 +102,13 @@ if (!isset($_POST['submit'])) {
 
     # check if username and email exist else insert
     $exists = 0;
-    $result = $mysqli->query("SELECT userName from users WHERE userName = '{$username}' LIMIT 1");
+    $result = $mysqli->query("SELECT userName from users WHERE userName = '{$username}'");
     if ($result->num_rows == 1) {
         $exists = 1;
-        $result = $mysqli->query("SELECT userEmail from users WHERE userEmail = '{$email}' LIMIT 1");
+        $result = $mysqli->query("SELECT userEmail from users WHERE userEmail = '{$email}'");
         if ($result->num_rows == 1) $exists = 2;
     } else {
-        $result = $mysqli->query("SELECT userEmail from users WHERE userEmail = '{$email}' LIMIT 1");
+        $result = $mysqli->query("SELECT userEmail from users WHERE userEmail = '{$email}'");
         if ($result->num_rows == 1) $exists = 3;
     }
 
@@ -116,9 +119,7 @@ if (!isset($_POST['submit'])) {
         # insert data into mysql database
         $sql = "INSERT  INTO `users` (`firstName`, `lastName`, `mobileNumber`, `userEmail`, `userName`, `userPass`)
                 VALUES ('{$first_name}', '{$last_name}', '{$mobileNum}', '{$email}', '{$username}', '{$password}')";
-
         if ($mysqli->query($sql)) {
-            //echo "New Record has id ".$mysqli->insert_id;
             echo "<p>Registred successfully!</p>";
         } else {
             echo "<p>MySQL error no {$mysqli->errno} : {$mysqli->error}</p>";
