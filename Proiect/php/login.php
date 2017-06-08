@@ -68,7 +68,7 @@ if (!isset($_POST['submit'])){
 
 <?php
 } else {
-    require_once("db_const.php");
+    require_once("../app/views/db_const.php");
     $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
     # check connection
     if ($mysqli->connect_errno) {
