@@ -22,7 +22,7 @@
 
         <nav class="sidebar">
             <ul class="sidebar">
-                <li class="sidebar"><a class="sidebar" href="../home.html">Home</a>
+                <li class="sidebar"><a class="sidebar" href="../home.php">Home</a>
                 </li>
                 <li class="sidebar"><a class="sidebar" href="../colectii.php">Colectii</a>
                 </li>
@@ -68,7 +68,7 @@ if (!isset($_POST['submit'])){
 
 <?php
 } else {
-    require_once("../app/views/db_const.php");
+    require_once("../app/db_const.php");
     $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
     # check connection
     if ($mysqli->connect_errno) {
@@ -94,15 +94,17 @@ if (!isset($_POST['submit'])){
 		$up_stmt->close();
 	}
     */
-	$sql = "SELECT * from users WHERE userName LIKE '{$username}' AND userPass LIKE '{$password}' LIMIT 1";
+	$sql = "SELECT * from users WHERE userName LIKE '{$username}' AND userPass LIKE '{$password}'";
     $result = $mysqli->query($sql);
     if (!$result->num_rows == 1) {
         echo "<p>Invalid username/password combination</p>";
 		$result->close();
     } else {
-	$_SESSION['usr_id'] = $row[0];
-	$_SESSION['username'] = $row[1];
-	$sql_string = "UPDATE users SET userStatus = 'Y' WHERE userName LIKE '{$username}' AND userPass LIKE '{$password}'";
+		if($row = mysqli_fetch_row($result)){
+			$_SESSION['usr_id'] = $row[0];
+			$_SESSION['username'] = $row[1];
+		}
+		$sql_string = "UPDATE users SET userStatus = 'Y' WHERE userName LIKE '{$username}' AND userPass LIKE '{$password}'";
 		if(!$mysqli->query($sql_string)){
 			printf("error: %s\n", $mysqli_error);
 		}
