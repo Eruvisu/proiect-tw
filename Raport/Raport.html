@@ -1,0 +1,208 @@
+
+<!DOCTYPE HTML>
+
+<html lang = "en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewreport" content="width=device-width">
+		<title>Artifacty Site Report</title>
+		<link rel="stylesheet" type="text/css" href="MyReportStyle.css">
+	</head>
+
+	<body prefix="schema: http://schema.org/ xsd: http://www.w3.org/2001/XMLSchema# sa: https://ns.science.ai/">
+		<header>
+      <h1 class="title">Artifacty Technical Report</h1>
+      
+    	</header>
+		<article id="title" typeof="schema:ScholarlyArticle" resource="#">
+      		
+      		<section>
+      			<h2 id="authors">Authors:</h2>
+      			<ol class="text-font">
+		  
+          
+
+          <li property="schema:author" typeof="sa:ContributorRole">
+            <a property="schema:author" href="https://www.facebook.com/AndronicTeodora" typeof="schema:Person">
+              <span property="schema:givenName">Teodora</span>
+              <span property="schema:familyName">Andronic</span>
+            </a>
+            <sup property="sa:roleContactPoint" typeof="schema:ContactPoint">
+              <a property="schema:email" href="mailto:teodora.andronic@gmail.com" title="corresponding author">&#9993;</a>
+            </sup>
+          </li>
+
+          <li property="schema:author" typeof="sa:ContributorRole">
+            <a property="schema:author" href="https://www.facebook.com/hostiuc.danut" typeof="schema:Person">
+              <span property="schema:givenName">Danuț</span>
+              <span property="schema:familyName">Hostiuc</span>
+            </a>
+            <sup property="sa:roleContactPoint" typeof="schema:ContactPoint">
+              <a property="schema:email" href="mailto:@gmail.com" title="corresponding author">&#9993;</a>
+            </sup>
+          </li>
+		
+		<li property="schema:author" typeof="sa:ContributorRole">
+            <a property="schema:author" href="https://www.facebook.com/larisa.iuliana.9235" typeof="schema:Person">
+              <span property="schema:givenName">Larisa</span>
+              <span property="schema:familyName">Rachieru</span>
+            </a>
+            <sup property="sa:roleContactPoint" typeof="schema:ContactPoint">
+              <a property="schema:email" href="mailto:@gmail.com" title="corresponding author">&#9993;</a>
+            </sup>
+          </li>
+		  
+		
+		<li property="schema:author" typeof="sa:ContributorRole">
+            <a property="schema:author" href="https://www.facebook.com/profile.php?id=100008467172933" typeof="schema:Person">
+              <span property="schema:givenName">Elvis</span>
+              <span property="schema:familyName">Tîncu</span>
+            </a>
+            <sup property="sa:roleContactPoint" typeof="schema:ContactPoint">
+              <a property="schema:email" href="mailto:@gmail.com" title="corresponding author">&#9993;</a>
+            </sup>
+          </li>
+        </ol>
+		
+      		</section>
+
+
+      		<section class="text-font">
+      			<h2>1.Description Of The Site</h2>
+      			<p>The site is named Artifacty.</p>
+				<p>The site allows the user to view information about archaeological artifacts collections, to search for a specific artifact or to view different statistics about collections.</p>
+				<p>A new user can register or login. An authenticated user can import into the database a new artifact with the permission of the 
+				   administrator, can subscribe to newsletter and receive an email when a news is posted. He can also post a feedback. </p>
+				<p> Any user can find out informations about the site and collections.</p>
+      		</section>
+
+      		<section>
+      			<h2>2.Arhitecture</h2>
+      		
+				<p> This is the architecture of our site ilustrated in this diagram</p>
+      			<figure typeof="sa:Image">
+            		<img src="site_diagram.png" width="1100" height="700">
+         		</figure>
+				
+				<section>
+				   <h3>2.1 Database diagram</h3>
+				     <p> This is the database diagram: </p>
+					 <figure typeof="sa:Image">
+            		<img src="db_diagram.jpg" width="1100" height="700">
+         		</figure>
+				</section>
+			</section>	
+      		<section>
+      			<h2>3.First Page</h2>
+				<p> This is how the first page looks like:</p>
+				<figure typeof="sa:Image">
+				   <img src="first_page.png" width="800" height="600">
+				 </figure>
+				<p> It contains a header title, a navigation menu, the login and register options, the search
+				bar and in the main section a brief presentation of the site. </p>
+				
+      		</section>
+
+      		<section>
+      			<h2>4.Description of the modules</h2>
+				 <section>
+					   <h3>4.1 Collections</h3><h5> Author: Hostiuc Danut</h5>
+					    <figure typeof="sa:Image">
+					     <img src="collections.png"  width="800" height="600">
+					    </figure>
+					     <p>This page offers the user the posibility to view a slideshow of artifact pictures and informations about collections of archaeological artifacts, structured by types, roles, according to geographic location etc.</p>
+			</section>  
+
+			<section>
+					   <h3>4.2 Statistics</h3><h5> Author: Rachieru Larisa</h5>
+					    <figure typeof="sa:Image">
+					     <img src="statistics.png"  width="800" height="600">
+					    </figure>
+						<p>This page offers the user the posibility to view different statistics about collections that matches some criteria.</p>
+						<p>For example: all mortuary mask artifacts discovered in the 20th century in Africa or those that are not yet dated/researched.</p>
+						<p>You can also use a text field to fill with some key words for better results. You can just check the boxes and press search and 
+						the results will be displayed on the screen.</p>
+						<p>All those check-boxes creates a query that searches in the database with multiple WHERE clauzes,</p>
+			</section>
+			
+			
+			
+			<section>
+					   <h3>4.3 News</h3><h5> Author: Rachieru Larisa</h5>
+					    <figure typeof="sa:Image">
+					     <img src="news.png"  width="800" height="600">
+						</figure>
+						<p>This page contain the latest news about archaeological artifacts.</p>
+						<p>The user can subscribe to newsletter.
+					    <p>Only the admin can add new information on this section.</p>
+			</section>
+			
+			<section>
+					   <h3>4.4 Feedback</h3><h5>Author: Andronic Teodora</h5>
+					   <figure typeof="sa:Image">
+					     <img src="feedback.png"  width="800" height="600">
+					   </figure>
+					   <p> Here, users can leave some impressions/feedback about the informations found. </p>
+					   <p> The reviews will be moderated by an admin and after that they will be posted on the page.</p>
+			</section>
+		
+		
+			
+			
+			<section>
+					  <h3>4.5 Login </h3><h5> Author: Hostiuc Danuț </h5>
+					  <figure typeof="sa:Image">
+					     <img src="login.png"  width="800" height="600">
+					  </figure>
+					  <p>This page offers the user the posibility to login so that he can post a new artifact using the import button or to post a feedback.</p>
+					  <p>The login action uses a text field for the email and a password field for the password. When the login button is pressed, the
+					  script checks if the email exists in the users database and if the email and password matches.</p>
+					  <p>If the user doesn't have an account, they can use the link to the register page.</p>
+			</section>
+			<section>
+					    <h4>4.5.1 Register</h4>
+						  <figure typeof="sa:Image">
+					     <img src="register.png"  width="800" height="600">
+					  </figure>
+					  <p>This page offers the user the posibility to register so that he can have the priviledges of an logged-in user.</p>
+					  <p>This action will create a new user in the users database.</p>
+			</section>
+			
+			<section>
+				     <h3>4.6 Search</h3><h5> Author: Andronic Teodora</h5>
+					 <figure typeof="sa:Image">
+					   <img src="search.png"  width="800" height="600">
+					 </figure>
+					 <p> This page offers the user the ability to search more quickly an artifact using the text field and the search button, 
+					 when an artifact's name is written in the text field. The informations will be displayed on the page.</p>
+					 <p> This action creates a query that acceses the database of the artifacts and 
+					 returns the informaton about the artifact that was searched.</p>
+					 <p> The user can search the artifacts only by they're name</p>
+					 <p> For example: all the masks from the database.
+			</section>
+			
+			
+			<section>
+				     <h3>4.7 Content Management System</h3><h5> Author: Elvis Tîncu</h5>
+					 <figure typeof="sa:Image">
+					   <img src="cms.png"  width="800" height="600">
+					 </figure>
+					 <p> This page offers the admin the posibility to add, delete, and modify more quickly a collection in database.</p>
+					 <p> This action creates queries that acceses the database of the artifacts and do the actions:add, delete or modify.</p>
+			</section>
+				   
+      		<section>
+      			<h2>5.Used technologies</h2>
+				<p>We use MySQL that allows to use databases, Php, JavaScript so that the functionalities of the site can work.
+				properly.</p>
+				<p>We need to interrogate diffent tables such as: Artefacts, Users, P_Artefacts, Role, Material.</p>
+      		</section>
+
+      		<section>
+      			<h2>6.Resources</h2>
+				<p>The resources that we used are:</p>
+				<p>-artifacts informations and photos from wikipedia;</p>
+      		</section>
+      	</article>
+	</body>
+</html>
