@@ -1,51 +1,6 @@
-<html>
-<head>
-    <title>Login Form</title>
-	<link rel="stylesheet" href="../css/styles.css">
-    <meta charset="UTF-8">
-</head>
-<body>
-
-    <div class="container">
-
-		<ul class="topbar">
-            <li class="topbar"><a href="login.php">Log In</a>
-            </li>
-            <li class="topbar"><a href="register.php">Register</a>
-            </li>
-        </ul>
-
-        <header>
-            <h1 id="title">ARTIFACTY</h1>
-
-        </header>
-
-        <nav class="sidebar">
-            <ul class="sidebar">
-                <li class="sidebar"><a class="sidebar" href="../index.php">Home</a>
-                </li>
-                <li class="sidebar"><a class="sidebar" href="../colectii.php">Colectii</a>
-                </li>
-                <li class="sidebar"><a class="sidebar" href="../statistici.html">Statistici</a>
-                </li>
-                <li class="sidebar"><a class="sidebar" href="../noutati.html">Noutati</a>
-                </li>
-                <li class="sidebar"><a class="sidebar" href="../recenzii.html">Recenzii</a>
-                </li>
-                <li class="sidebar"><a class="sidebar" href="../contact.html">Contact</a>
-                </li>
-                <li class="sidebar"><a class="sidebar" href="../import.html">Import</a>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="searchbar">
-            <input type="text" placeholder="Search...">
-            <input type="submit" value="Go">
-        </div>
+<?php require VIEW_ROOT . '/template/header.php'; ?>
 
 <?php
-
 if (!isset($_POST['submit'])){
 ?>
 <!-- The HTML login form -->
@@ -68,7 +23,7 @@ if (!isset($_POST['submit'])){
 
 <?php
 } else {
-    require_once("../app/db_const.php");
+    require_once("app/db_const.php");
     $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
     # check connection
     if ($mysqli->connect_errno) {
@@ -114,10 +69,4 @@ if (!isset($_POST['submit'])){
 	
 }
 ?>      
-
-        <footer>Copyright &copy; Proiect TW</footer>
-
-    </div>
-
-</body>
-</html>
+<?php require VIEW_ROOT . '/template/footer.php'; ?>

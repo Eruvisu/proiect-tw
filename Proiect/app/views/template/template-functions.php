@@ -35,13 +35,13 @@ function do_topbar()
     {
         $topbar.='
                 <li class="topbar"><a class="topbar" href="">Signed in as '.$_SESSION['username'].'</a></li>
-                <li class="topbar"><a class="topbar" href="php/logout.php">Log out</a></li>';
+                <li class="topbar"><a class="topbar" href="logout.php">Log out</a></li>';
     }
     else 
     { 
         $topbar.='
-                <li class="topbar"><a class="topbar" href="php/login.php">Sign In</a></li>
-                <li class="topbar"><a class="topbar" href="php/register.php">Register</a></li>';
+                <li class="topbar"><a class="topbar" href="login.php">Sign In</a></li>
+                <li class="topbar"><a class="topbar" href="register.php">Register</a></li>';
     }
     $topbar.='</ul>';
     return $topbar;
