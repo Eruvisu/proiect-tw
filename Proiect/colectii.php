@@ -1,5 +1,8 @@
 <?php
-$the_title='Colectii';
-$the_content='colectii-content.php';
-?>
-<?php include('./php/template/site-template.php'); ?>
+require (__DIR__ . '/app/start.php');
+
+$sql = "select id_collection,title,url from collections";
+
+$pages=$db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+
+require VIEW_ROOT . '/colectii-view.php';

@@ -1,5 +1,5 @@
 <?php
-include_once('class-theme-methods.php');
+require_once(__DIR__.'/class-theme-methods.php');
 
 function do_sidebar()
 {
@@ -9,13 +9,15 @@ function do_sidebar()
     
     //This array contains the menu items
     $items_array=array(
-                        array('text'=>'Home','url'=>'home.php'),
+                        array('text'=>'Home','url'=>'index.php'),
                         array('text'=>'Colectii','url'=>'colectii.php'),
+                        array('text'=>'Artefacte','url'=>'artefacte.php'),
                         array('text'=>'Statistici','url'=>'statistici.php'),
                         array('text'=>'Noutati','url'=>'noutati.php'),
                         array('text'=>'Recenzii','url'=>'recenzii.php'),
                         array('text'=>'Contact','url'=>'contact.php'),
-                        array('text'=>'Import','url'=>'import.php')
+                        array('text'=>'Import','url'=>'import.php'),
+                        array('text'=>'Adauga o colectie','url'=>'list.php')
                     );
     return $themeMethods->navigation($items_array,$CssClass);
 }

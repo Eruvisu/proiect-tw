@@ -1,3 +1,5 @@
+<?php require VIEW_ROOT . '/template/header.php'; ?>
+
         <article>
             <h1 id="first">Artifacty</h1>
             <p>Sa se dezvolte o aplicatie Web ce realizeaza managementul informatiilor privitoare la colectii de artefacte arheologice, structurate pe tipuri, roluri, conform localizarii geografice etc.</p>
@@ -7,3 +9,5 @@
             <p>Datele procesate vor putea fi importate/exportate si via documente in formatele CSV, JSON si XML.</p>
             <p>Bonus: recurgerea la servicii cartografice pentru ilustrarea localizarii geografice a fiecarui artefact.</p>
         </article>
+
+<?php require VIEW_ROOT . '/template/footer.php'; ?>

@@ -1,4 +1,4 @@
 <?php
 require (__DIR__ . '/app/start.php');
 
-require VIEW_ROOT . '/home-view.php';
+require VIEW_ROOT . '/artefacte-view.php';

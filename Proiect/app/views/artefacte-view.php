@@ -1,6 +1,8 @@
+<?php require VIEW_ROOT . '/template/header.php'; ?>
+
         <article>
 		<?php
-			require_once("php/db_const.php");
+			require_once APP_ROOT.'/db_const.php';
 			$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 		
 			if($mysqli->connect_errno){
@@ -15,3 +17,5 @@
 			$result->close();
 		?>
         </article>
+
+<?php require VIEW_ROOT . '/template/footer.php'; ?>
