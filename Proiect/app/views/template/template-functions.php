@@ -50,8 +50,11 @@ function do_topbar()
 function do_searchbar()
 {
     $searchbar='
-            <input name="artefact_name" placeholder="Introdu denumire...">
-            <a href="Cautare.php"><input name="commit" type="submit" value="Cauta"></a>';
+        <form action="cautare.php" method="GET">
+	<input type="text" name="artefact_name" />
+	<input type="submit" value="Search" />
+        </form>
+        ';
     return $searchbar;
 }
 ?>

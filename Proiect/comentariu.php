@@ -1,6 +1,7 @@
- <?php
+<?php
 session_start();
-header('location: Recenzii.php');
+header('location: recenzii.php');
+require (__DIR__ . '/app/start.php');
  
 $hostname = "fenrir.info.uaic.ro";
 $username = "ArtifactyDB";
@@ -11,7 +12,7 @@ $con = new mysqli($hostname, $username, $password, $dbname);
 
  if($con->connect_error)
   {
-    die("Connection failed: " . $conn->connect_error);
+    die("Connection failed: " . $con->connect_error);
   }
  
 
@@ -41,10 +42,11 @@ IF($_SERVER["REQUEST_METHOD"]=="POST")
    echo "Inregistrare adaugata cu succes in baza de date!";
   }
   else
-  { echo "Error: " .$sql . "<br>" . $conn->error;}
+  { echo "Error: " .$sql . "<br>" . $con->error;}
   
   
 }
 
-$conn->close();
+$con->close();
+
 ?>
