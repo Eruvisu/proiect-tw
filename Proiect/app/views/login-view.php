@@ -1,4 +1,6 @@
-<?php require VIEW_ROOT . '/template/header.php'; ?>
+<?php 
+
+require VIEW_ROOT . '/template/header.php'; ?>
 
 <?php
 if (!isset($_POST['submit'])){
