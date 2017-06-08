@@ -22,7 +22,7 @@
 
         <nav class="sidebar">
             <ul class="sidebar">
-                <li class="sidebar"><a class="sidebar" href="../home.php">Home</a>
+                <li class="sidebar"><a class="sidebar" href="../index.php">Home</a>
                 </li>
                 <li class="sidebar"><a class="sidebar" href="../colectii.php">Colectii</a>
                 </li>
