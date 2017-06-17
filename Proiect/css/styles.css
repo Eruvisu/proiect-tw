@@ -74,7 +74,7 @@ a.topbar:hover {
 nav.sidebar {
     line-height: 65px;
     background-color: #d0d0e1;
-    height: 450p6;
+    height: 450px;
     width: 130px;
     float: left;
     padding: 5px;
@@ -128,7 +128,7 @@ article {
 }
 #title {
     text-align: left;
-    margin-left: 80p;
+    margin-left: 80px;
 		font: italic normal bold 35px/normal "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	  color: rgba(255,255,255,0.9);
 		text-shadow: 0 0 9px rgba(255,255,86,0.7);
@@ -160,7 +160,7 @@ input{
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   background:#ffb366;
-  border-radius: 14;
+  border-radius: 14px;
   width:60%;
   
 }
@@ -193,22 +193,22 @@ h3{
 
 
 div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 180px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
 }
 
 div.gallery:hover {
-    border: 1px solid #777;
+    border: 1px solid #777;
 }
 
 div.gallery img {
-    width: 100%;
-    height: auto;
+    width: 100%;
+    height: auto;
 }
 
 div.desc {
-    padding: 15px;
-    text-align: center;
+    padding: 15px;
+    text-align: center;
 }
