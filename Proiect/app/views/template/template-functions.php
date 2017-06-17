@@ -16,9 +16,11 @@ function do_sidebar()
                         array('text'=>'Noutati','url'=>'noutati.php'),
                         array('text'=>'Recenzii','url'=>'recenzii.php'),
                         array('text'=>'Contact','url'=>'contact.php'),
-                        array('text'=>'Import','url'=>'import.php'),
-                        array('text'=>'Adauga o colectie','url'=>'list.php')
+                        array('text'=>'Import','url'=>'import.php')                        
                     );
+    if(isset($_SESSION['usr_id'])){
+        array_push($items_array,array('text'=>'Adauga o colectie','url'=>'list.php'));
+    }
     return $themeMethods->navigation($items_array,$CssClass);
 }
 
