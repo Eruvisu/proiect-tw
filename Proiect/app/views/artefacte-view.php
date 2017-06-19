@@ -1,8 +1,9 @@
-<?php require VIEW_ROOT . '/template/header.php'; ?>
+<?php
+session_start();
+require VIEW_ROOT . '/template/header.php'; ?>
 
         <article>
 		<?php
-                session_start();
 			require_once APP_ROOT.'/db_const.php';
 			$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 		

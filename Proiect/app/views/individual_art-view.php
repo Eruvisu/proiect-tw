@@ -1,10 +1,14 @@
-<?php require VIEW_ROOT . '/template/header.php'; ?>
-
 <?php
 session_start();
+require VIEW_ROOT . '/template/header.php'; ?>
+
+<?php
 $img_p = $_SESSION['image_path'];
 $artefact_name = $_SESSION['art_name'];
-$user_id = $_SESSION['usr_id'];
+if(isset($_SESSION['usr_id']))
+{
+    $user_id = $_SESSION['usr_id'];
+}
 ?>
 <div class="responsive">
     <div class="gallery">
