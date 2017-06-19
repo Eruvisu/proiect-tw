@@ -3,6 +3,9 @@ session_start();
 require VIEW_ROOT . '/template/header.php'; ?>
 
         <article>
+		<div class="artefacteTitle">
+		<h class="first"> ARTEFACTE </h>
+		</div>
 		<?php
 			require_once APP_ROOT.'/db_const.php';
 			$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
