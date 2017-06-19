@@ -115,4 +115,10 @@ if(isset($_SESSION['usr_id']))
         }
     ?>
 </div>
+
+<div>
+    <form action="cart.php">
+        <input type = "submit" value="View cart" name = "cart">
+    </form>
+</div>
 <?php require VIEW_ROOT . '/template/footer.php'; 
