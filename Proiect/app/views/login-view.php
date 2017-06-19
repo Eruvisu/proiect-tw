@@ -51,7 +51,7 @@ if (!isset($_POST['submit'])){
 		$up_stmt->close();
 	}
     */
-	$sql = "SELECT * from users WHERE userName LIKE '{$username}' AND userPass LIKE '{$password}'";
+    $sql = "SELECT * from users WHERE userName LIKE '{$username}' AND userPass LIKE '{$password}'";
     $result = $mysqli->query($sql);
     if (!$result->num_rows == 1) {
         echo "<p>Invalid username/password combination</p>";

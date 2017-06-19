@@ -2,6 +2,7 @@
 
         <article>
 		<?php
+                session_start();
 			require_once APP_ROOT.'/db_const.php';
 			$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 		
@@ -12,10 +13,12 @@
 			$sql = "SELECT CONCAT(image_path, artefact_name, extension), artefact_name AS image FROM artefacts";
 			$result = $mysqli->query($sql);
 			while($row = mysqli_fetch_row($result)){
-				echo '<div class="responsive"><div class="gallery"><a target="_blank" href="'.$row[0].'"><img src="'.$row[0].'" width="300" height="200"></a><div class="desc">'.$row[1].'</div></div></div>';
+                                $_SESSION['image_path'] = $row[0];
+                                $_SESSION['art_name'] = $row[1];
+				echo '<div class="responsive"><div class="gallery"><a target="_blank" href="individual_art.php"><img src="'.$row[0].'" width="300" height="200"></a><div class="desc">'.$row[1].'</div></div></div>';
 			}
 			$result->close();
 		?>
         </article>
 
-<?php require VIEW_ROOT . '/template/footer.php'; ?>
+<?php require VIEW_ROOT . '/template/footer.php'; 

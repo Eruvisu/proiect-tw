@@ -5,6 +5,7 @@
         <!-- Stylesheets -->
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <meta charset="UTF-8">
     </head>
     <body>
