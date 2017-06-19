@@ -22,7 +22,7 @@ $user_id = $_SESSION['usr_id'];
 	echo "<p>MySQL error no {$mysqli->connect_errno} : {$mysqli->connect_error}</p>";
 	exit();
     }
-    $sql = "SELECT id_artefact, time_period, geo_position, material FROM artefacts WHERE artefact_name='{$artefact_name}' LIMIT 1";
+    $sql = "SELECT id_artefact, time_period, geo_position, description FROM artefacts WHERE artefact_name='{$artefact_name}' LIMIT 1";
     $result = $mysqli->query($sql);
     while($row = mysqli_fetch_row($result)){
         $id_art = $row[0];
