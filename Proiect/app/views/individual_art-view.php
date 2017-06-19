@@ -18,6 +18,7 @@ if(isset($_SESSION['usr_id']))
         <div class="desc"><?php echo $artefact_name?></div>
     </div>
 </div>
+<div class="responsive">
 <?php
     require_once APP_ROOT.'/db_const.php';
     $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
@@ -36,8 +37,8 @@ if(isset($_SESSION['usr_id']))
     }
     $result->close();
 ?>
-
-<article>
+</div>
+<div class = "responsive">
     <form method = "POST">
         <input type = "submit" value="Add to cart" name="add">
     </form>
@@ -59,6 +60,59 @@ if(isset($_SESSION['usr_id']))
             }
         }
     ?>
-</article>
+</div>
+<div class="responsive">
+    <form method = "POST">
+        <input type = "submit" value="More artefacts related by date" name="add_date">
+    </form>
+    <?php
+        if(isset($_POST['add_date'])){
+            $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+		
+            if($mysqli->connect_errno){
+                echo "<p>MySQL error no {$mysqli->connect_errno} : {$mysqli->connect_error}</p>";
+                exit();
+            }
+            $sql_query = "SELECT CONCAT(image_path, artefact_name, extension), artefact_name, time_period, geo_position AS image FROM artefacts WHERE time_period='{$period}'";
 
+            if ($mysqli->query($sql_query)) {
+                $result = $mysqli->query($sql_query);
+                while($row = mysqli_fetch_row($result)){
+                    echo '<div class="responsive"><div class="gallery"><a target="_blank" href=""><img src="'.$row[0].'" width="300" height="200"></a><div class="desc">'.$row[1].'</div><div class="desc">Date: '.$row[2].'</div><div class="desc">Discovery location: '.$row[3].'</div></div></div>';
+                }
+                $result->close();
+            } else {
+                echo "<p>MySQL error no {$mysqli->errno} : {$mysqli->error}</p>";
+                exit();
+            }
+        }
+    ?>
+</div>
+<div class="responsive">
+    <form method = "POST">
+        <input type = "submit" value="More artefacts related by discovery location" name="add_pos">
+    </form>
+    <?php
+        if(isset($_POST['add_date'])){
+            $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+		
+            if($mysqli->connect_errno){
+                echo "<p>MySQL error no {$mysqli->connect_errno} : {$mysqli->connect_error}</p>";
+                exit();
+            }
+            $sql_query = "SELECT CONCAT(image_path, artefact_name, extension), artefact_name, time_period, geo_position AS image FROM artefacts WHERE geo_position='{$position}'";
+
+            if ($mysqli->query($sql_query)) {
+                $result = $mysqli->query($sql_query);
+                while($row = mysqli_fetch_row($result)){
+                    echo '<div class="responsive"><div class="gallery"><a target="_blank" href=""><img src="'.$row[0].'" width="300" height="200"></a><div class="desc">'.$row[1].'</div><div class="desc">Date: '.$row[2].'</div><div class="desc">Discovery location: '.$row[3].'</div></div></div>';
+                }
+                $result->close();
+            } else {
+                echo "<p>MySQL error no {$mysqli->errno} : {$mysqli->error}</p>";
+                exit();
+            }
+        }
+    ?>
+</div>
 <?php require VIEW_ROOT . '/template/footer.php'; 
