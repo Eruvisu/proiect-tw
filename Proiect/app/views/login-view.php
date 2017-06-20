@@ -35,22 +35,7 @@ if (!isset($_POST['submit'])){
 
     $username = $_POST['username'];
     $password = $_POST['password'];
-	/*
-	$stmt = $mysqli->prepare("SELECT * from users WHERE userName LIKE ? AND userPass LIKE ?");
-	$stmt->bind_param("ss", $username, $password);
-	$stmt->execute();
-	$stmt->fetch();
-	$numRows = $stmt->num_rows;
-	if(!$numRows == 1){
-		echo "<p>Invalid username/password combination</p>";
-		$stmt->close();
-	}else{
-		$up_stmt = $mysqli_prepare("UPDATE users SET userStatus = 'Y' WHERE userName LIKE ? AND userPass LIKE ?");
-		$up_stmt->bind_param("ss", $username, $password);
-		$up_stmt->execute();
-		$up_stmt->close();
-	}
-    */
+
     $sql = "SELECT * from users WHERE userName LIKE '{$username}' AND userPass LIKE '{$password}'";
     $result = $mysqli->query($sql);
     if (!$result->num_rows == 1) {
