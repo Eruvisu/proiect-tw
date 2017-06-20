@@ -18,13 +18,14 @@
                         <td><?php echo escape($page['title']); ?></td>
                         <td><a href="<?php echo BASE_URL; ?>/collection.php?col=<?php echo escape($page['url']); ?>"><?php echo escape($page['url']); ?></a></td>
                         <td><a href="<?php echo BASE_URL; ?>/edit-collection.php?id=<?php echo escape($page['id_collection']); ?>">Edit</a></td>
-                        <td><a href="<?php echo BASE_URL; ?>/delete.php?id=<?php echo escape($page['id_collection']); ?>">Delete</a></td>
+                        <td><a href="<?php echo BASE_URL; ?>/delete-collection.php?id=<?php echo escape($page['id_collection']); ?>">Delete</a></td>
                     </tr>
                 <?php endforeach; ?>
+                <tr>
+                    <td><a href="<?php echo BASE_URL; ?>/add-collection.php">Add new collection</a></td>
+                </tr>
             </tbody>
         </table>
 <?php endif; ?>
 
-    <a href="<?php echo BASE_URL; ?>/add-collection.php">Add new collection</a>
-    
 <?php require VIEW_ROOT . '/template/footer.php'; ?>
