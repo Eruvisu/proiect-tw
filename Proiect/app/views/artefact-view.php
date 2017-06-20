@@ -14,6 +14,16 @@ if(isset($_SESSION['usr_id']))
 {
     $user_id = $_SESSION['usr_id'];
 }
+
+if(isset($_GET['id'])) {
+    $artefact=$db->prepare("select * from artefacts where id_artefact=:id limit 1");
+
+    $artefact->execute(['id'=>$_GET['id']]);
+
+    $artefact=$artefact->fetch(PDO::FETCH_ASSOC);
+    }
+    $artefact_name=$artefact['artefact_name'];
+    $img_p=$artefact['image_path'].$artefact['artefact_name'].$artefact['extension'];
 ?>
 <div class="responsive">
     <div class="singleArtefact">
@@ -33,15 +43,18 @@ if(isset($_SESSION['usr_id']))
 	echo "<p>MySQL error no {$mysqli->connect_errno} : {$mysqli->connect_error}</p>";
 	exit();
     }
-    $sql = "SELECT id_artefact, time_period, geo_position, description FROM artefacts WHERE artefact_name='{$artefact_name}'";
-    $result = $mysqli->query($sql);
-    while($row = mysqli_fetch_row($result)){
+    $results=$db->prepare("SELECT id_artefact, time_period, geo_position, description FROM artefacts WHERE artefact_name=:artefact_name");
+    $results->execute(['artefact_name'=>$artefact_name]);
+    $results=$results->fetchAll(PDO::FETCH_ASSOC);
+    //$result = $mysqli->query($sql);
+/*    while($row = mysqli_fetch_row($result)){
         $id_art = $row[0];
         $period = $row[1];
-        $position = $row[2];
-	echo '<div class="singleDesc">'.$row[3].'</div>';
+        $position = $row[2];*/
+    foreach ($results as $result) {
+        echo '<div class="singleDesc">' . $result['description'] . '</div>';
     }
-    $result->close();
+    //$result->close();
 ?>
 </div>
 <div class = "responsive">
