@@ -168,7 +168,6 @@ tr{
 	  height: 50px;
 }
 
-
 form.searchbar {
     float: right;
 }
@@ -221,3 +220,34 @@ div.artefacteTitle {
     color: #b75109;
 }
 
+div.singleArtefact {
+    margin: 10px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 240px;
+}
+
+
+div.singleDesc {
+    padding: 100px;
+    text-align: center;
+}
+
+
+div.singleArtefact img {
+    width: 100%;
+    height: 250px;
+}
+
+
+div.singleArtefact2 {
+    margin: 10px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 240px;
+}
+
+div.singleArtefact2 img {
+    width: 100%;
+    height: 250px;
+}

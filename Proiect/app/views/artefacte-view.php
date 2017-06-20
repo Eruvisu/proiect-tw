@@ -18,7 +18,7 @@ require VIEW_ROOT . '/template/header.php'; ?>
 			$result = $mysqli->query($sql);
 			while($row = mysqli_fetch_row($result)){
                                 $_SESSION['image_path'] = $row[0];
-                                $_SESSION['art_name'] = $row[1];
+                                $_SESSION['artefact_name'] = $row[1];
 				echo '<div class="responsive"><div class="gallery"><a target="_blank" href="individual_art.php"><img src="'.$row[0].'" width="300" height="200"></a><div class="desc">'.$row[1].'</div><div class="desc">Date: '.$row[2].'</div><div class="desc">Discovery location: '.$row[3].'</div></div></div>';
 			}
 			$result->close();

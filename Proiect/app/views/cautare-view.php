@@ -17,7 +17,7 @@ require VIEW_ROOT . '/template/header.php';
 
                 while ($row = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
 
-                    echo '<div class="responsive"><div class="gallery"><a target="_blank" href="' . $row['source'] . '"><img src="' . $row['source'] . '" width="300" height="200"></a><div class="desc">' . $row['artefact_name'] . '</div></div></div>';
+                    echo '<div class="responsive"><div class="gallery"><a target="_blank" href="individual_art.php"><img src="' . $row['source'] . '" width="300" height="200"></a><div class="desc">' . $row['artefact_name'] . '</div></div></div>';
                 }
 
                 mysqli_close($con);
