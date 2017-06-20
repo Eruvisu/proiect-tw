@@ -55,8 +55,13 @@ if(isset($_SESSION['usr_id']))
 	<form method = "POST">
     <input type = "submit" value="More artefacts related by discovery location" name="add_pos">
     </form>
+
+    <form action="cart.php">
+        <input type = "submit" value="View cart" name = "cart">
+    </form>
+
 </div>	
-	
+
 	
 <div class = "responsive">	
 	
@@ -127,9 +132,4 @@ if(isset($_SESSION['usr_id']))
     ?>
 </div>
 
-<div>
-    <form action="cart.php">
-        <input type = "submit" value="View cart" name = "cart">
-    </form>
-</div>
 <?php require VIEW_ROOT . '/template/footer.php'; 
