@@ -12,11 +12,11 @@ function do_sidebar()
                         array('text'=>'Home','url'=>'index.php'),
                         array('text'=>'Colectii','url'=>'colectii.php'),
                         array('text'=>'Artefacte','url'=>'categorii.php'),
-                        array('text'=>'Statistici','url'=>'statistici.php'),
-                        array('text'=>'Noutati','url'=>'noutati.php'),
+                        //array('text'=>'Statistici','url'=>'statistici.php'),
+                        //array('text'=>'Noutati','url'=>'noutati.php'),
                         array('text'=>'Recenzii','url'=>'recenzii.php'),
-                        array('text'=>'Contact','url'=>'contact.php'),
-                        array('text'=>'Import','url'=>'import.php')                        
+                        //array('text'=>'Contact','url'=>'contact.php'),
+                        //array('text'=>'Import','url'=>'import.php')                        
                     );
     if(isset($_SESSION['usr_id'])){
         array_push($items_array,array('text'=>'Adauga o colectie','url'=>'list.php'));
