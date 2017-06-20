@@ -22,7 +22,7 @@
             <?php foreach($artefacts as $artefact): ?>
                 <tr>
                     <td><a href="<?php echo BASE_URL; ?>/artefact.php?id=<?php echo escape($artefact['id_artefact']); ?>"><?php echo escape($artefact['artefact_name']); ?></a></td>
-                    <td><a href="<?php echo BASE_URL; ?>/edit-artefact.php?id=<?php echo escape($artefact['id_artefact']); ?>">Edit</a></td>
+                    <td><a href="<?php echo BASE_URL; ?>/edit-artefact.php?idcol=<?php echo escape($page['id_collection']); ?>&id= <?php echo escape($artefact['id_artefact']); ?>">Edit</a></td>
                     <td><a href="<?php echo BASE_URL; ?>/delete-artefact.php?id=<?php echo escape($artefact['id_artefact']); ?>">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
