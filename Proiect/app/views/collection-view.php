@@ -29,6 +29,9 @@
                 <tr>
                     <td><a href="<?php echo BASE_URL; ?>/add-artefact.php?idcol=<?php echo escape($page['id_collection']); ?>">Add new artefact</a></td>
                 </tr>
+            <tr>
+                <td><a href="<?php echo BASE_URL; ?>/serialize-artefacts.php?idcol=<?php echo escape($page['id_collection']); ?>">Serializeaza artefactele</a></td>
+            </tr>
             </tbody>
         </table>
     <?php endif; ?>
