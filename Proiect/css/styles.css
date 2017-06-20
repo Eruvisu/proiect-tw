@@ -199,6 +199,11 @@ h3{
 	text-align:center;
 }
 
+h1{
+	font-size: 15px;
+}
+
+
 
 div.gallery {
     margin: 5px;
@@ -261,11 +266,5 @@ div.singleArtefact2 img {
     width: 100%;
     height: 250px;
 }
-
-
-div.divider {
-    font-size: 0;
-    line-height: 0;
-    overflow: hidden;}
 
 
