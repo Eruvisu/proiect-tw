@@ -4,7 +4,7 @@ require VIEW_ROOT . '/template/header.php'; ?>
 
         <article>
 		<div class="artefacteTitle">
-		<h class="first"> ARTEFACTE </h>
+		<h class="first"> ISLAMIC ARTIFACTS </h>
 		</div>
 		<?php
 			require_once APP_ROOT.'/db_const.php';
@@ -14,12 +14,12 @@ require VIEW_ROOT . '/template/header.php'; ?>
 				echo "<p>MySQL error no {$mysqli->connect_errno} : {$mysqli->connect_error}</p>";
 				exit();
 			}
-			$sql = "SELECT CONCAT(image_path, artefact_name, extension), artefact_name, time_period, geo_position AS image FROM artefacts";
+			$sql = "SELECT CONCAT(image_path, artefact_name, extension), artefact_name, time_period, geo_position AS image FROM artefacts WHERE id_categorie=1";
 			$result = $mysqli->query($sql);
 			while($row = mysqli_fetch_row($result)){
                                 $_SESSION['image_path'] = $row[0];
                                 $_SESSION['artefact_name'] = $row[1];
-				echo '<div class="responsive"><div class="gallery"><a target="_blank" href="individual_art.php"><img src="'.$row[0].'" width="300" height="200"></a><div class="desc">'.$row[1].'</div><div class="desc">Date: '.$row[2].'</div><div class="desc">Discovery location: '.$row[3].'</div></div></div>';
+				echo '<div class="responsive"><div class="gallery"><a target="_blank" href="artefacte.php"><img src="'.$row[0].'" width="300" height="200"></a><div class="desc">'.$row[1].'</div><div class="desc">Date: '.$row[2].'</div><div class="desc">Discovery location: '.$row[3].'</div></div></div>';
 			}
 			$result->close();
 		?>

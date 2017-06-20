@@ -11,7 +11,7 @@ function do_sidebar()
     $items_array=array(
                         array('text'=>'Home','url'=>'index.php'),
                         array('text'=>'Colectii','url'=>'colectii.php'),
-                        array('text'=>'Artefacte','url'=>'artefacte.php'),
+                        array('text'=>'Artefacte','url'=>'categorii.php'),
                         array('text'=>'Statistici','url'=>'statistici.php'),
                         array('text'=>'Noutati','url'=>'noutati.php'),
                         array('text'=>'Recenzii','url'=>'recenzii.php'),
