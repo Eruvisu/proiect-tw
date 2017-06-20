@@ -2,6 +2,7 @@
 
 <?php if(empty($pages)): ?>
     <p>No collections created.<p>
+    <a href="<?php echo BASE_URL; ?>/add-collection.php">Add new collection</a>
 <?php else: ?>
         <table>
             <thead>

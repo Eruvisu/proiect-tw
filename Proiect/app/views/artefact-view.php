@@ -4,8 +4,10 @@ require VIEW_ROOT . '/template/header.php'; ?>
 
 <?php
 $img_p = $_SESSION['image_path'];
-$artefact_name = $_SESSION['artefact_name'];
 
+if(isset($_SESSION['artefact_name'])) {
+    $artefact_name = $_SESSION['artefact_name'];
+}
 
 
 if(isset($_SESSION['usr_id']))
