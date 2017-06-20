@@ -31,7 +31,7 @@ require VIEW_ROOT . '/template/header.php'; ?>
 
 		<div class="categorii">
 <?php	
-  echo '<a href="artefacte3.php"><h2>EGYPTIAN ARTEFACTS</h2></a>';
+  echo '<a href="artefacte3.php"><h2>EGYPTIAN ARTIFACTS</h2></a>';
 ?>	  
   
   <p> The collection reflect the aesthetic values, history, religious beliefs, and daily life of the ancient Egyptians over the entire course of their great civilization.</p>
@@ -40,7 +40,7 @@ require VIEW_ROOT . '/template/header.php'; ?>
 
 		<div class="categorii">
 <?php	
-  echo '<a href="artefacte4.php"><h2>ASIAN ARTEFACTS</h2></a>';
+  echo '<a href="artefacte4.php"><h2>ASIAN ARTIFACTS</h2></a>';
 ?>	  
   
   <p>Each of the many civilizations of Asia is represented by outstanding works, providing an unrivaled experience of the artistic traditions of nearly half the world.</p>
