@@ -266,3 +266,22 @@ div.singleArtefact2 img {
 }
 
 
+div.categorii {   
+    background-color: #fec15f;
+    color: #b8540c;
+    padding: 20px;
+    border-radius: 14px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+    border-bottom-left-radius: 14px;
+    font: italic normal 15px/normal "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
