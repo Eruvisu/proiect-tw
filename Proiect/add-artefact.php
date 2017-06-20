@@ -46,7 +46,7 @@ if(!empty($_POST)){
         ");
 
     $insertArtefact->execute([
-        'artefact_name'=>$ame,
+        'artefact_name'=>$name,
         'extension'=>$file_ext,
         'period'=>$period,
         'time_period'=>$time_period,
@@ -55,7 +55,7 @@ if(!empty($_POST)){
         'material'=>$material,
         'classification'=>$classification,
         'description'=>$description,
-        'id_col'=>$id_col
+        'id_collection'=>$id_col
     ]);
 
     $url_col=BASE_URL.'/collection.php?col='.escape($url_col);
@@ -65,7 +65,7 @@ if(!empty($_POST)){
 if(isset($_GET['idcol'])){
     $id_collection=$_GET['idcol'];
 
-    $collection=$db->prepare("select id_collection,url, from collections where id_collection=:id");
+    $collection=$db->prepare("select url from collections where id_collection=:id");
 
     $collection->execute(['id'=>$id_collection]);
 
@@ -73,6 +73,8 @@ if(isset($_GET['idcol'])){
     $url_collection=$collection['url'];
 }
 $periods=$db->query("Select distinct period from artefacts order by period asc")->fetchAll(PDO::FETCH_ASSOC);
+$materials=$db->query("Select distinct material from artefacts order by material asc")->fetchAll(PDO::FETCH_ASSOC);
+$classifications=$db->query("Select distinct classification from artefacts order by classification asc")->fetchAll(PDO::FETCH_ASSOC);
 
 require __DIR__. '/app/views/add-artefact-view.php';
 
