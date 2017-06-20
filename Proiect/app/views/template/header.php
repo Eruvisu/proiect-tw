@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <?php if(!isset($the_title)) $the_title="Artefacty"; ?>
         <title><?php echo do_html_title($the_title); ?></title>
         <!-- Stylesheets -->
         <link rel="stylesheet" href="css/styles.css">
