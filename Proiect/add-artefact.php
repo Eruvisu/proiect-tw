@@ -24,13 +24,14 @@ if(!empty($_POST)){
 
         $file_ext=explode('.',$file_name);
         $file_ext=strtolower(end($file_ext));
+        $file_ext='.'.$file_ext;
 
-        $allowed=array('jpg','png');
+        $allowed=array('.jpg','.png');
 
         if(in_array($file_ext,$allowed)){
             if($file_error===0){
                 if($file_size<=10485760){
-                    $file_name_new=$name.'.'.$file_ext;
+                    $file_name_new=$name.$file_ext;
                     $file_destination='images/Artefacts/'.$file_name_new;
 
                     if(!move_uploaded_file($file_tmp,$file_destination)){

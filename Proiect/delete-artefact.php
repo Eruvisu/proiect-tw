@@ -7,7 +7,7 @@ if(isset($_GET['id'])){
     $urlCollection=$db->query("Select  url from collections where id_collection=".$artefact['id_collection'])->fetch(PDO::FETCH_ASSOC);
     $deleteArtefact=$db->prepare("delete from artefacts where id_artefact=:id");
 
-    $path=$artefact['image_path'].$artefact['artefact_name'].'.'.$artefact['extension'];
+    $path=$artefact['image_path'].$artefact['artefact_name'].$artefact['extension'];
     if($deleteArtefact->execute(['id'=>$_GET['id']])){
         unlink($path);
     }
