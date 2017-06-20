@@ -4,18 +4,22 @@ require VIEW_ROOT . '/template/header.php'; ?>
 
 <?php
 $img_p = $_SESSION['image_path'];
-$artefact_name = $_SESSION['art_name'];
+$artefact_name = $_SESSION['artefact_name'];
+
+
+
 if(isset($_SESSION['usr_id']))
 {
     $user_id = $_SESSION['usr_id'];
 }
 ?>
 <div class="responsive">
-    <div class="gallery">
+    <div class="singleArtefact">
         <a target="_blank" href="">
             <img src="<?php echo $img_p?>" width="300" height="200">
         </a>
         <div class="desc"><?php echo $artefact_name?></div>
+		
     </div>
 </div>
 <div class="responsive">
@@ -27,21 +31,40 @@ if(isset($_SESSION['usr_id']))
 	echo "<p>MySQL error no {$mysqli->connect_errno} : {$mysqli->connect_error}</p>";
 	exit();
     }
-    $sql = "SELECT id_artefact, time_period, geo_position, description FROM artefacts WHERE artefact_name='{$artefact_name}' LIMIT 1";
+    $sql = "SELECT id_artefact, time_period, geo_position, description FROM artefacts WHERE artefact_name='{$artefact_name}'";
     $result = $mysqli->query($sql);
     while($row = mysqli_fetch_row($result)){
         $id_art = $row[0];
         $period = $row[1];
         $position = $row[2];
-	echo '<div class="desc">'.$row[3].'</div>';
+	echo '<div class="singleDesc">'.$row[3].'</div>';
     }
     $result->close();
 ?>
 </div>
 <div class = "responsive">
+
     <form method = "POST">
         <input type = "submit" value="Add to cart" name="add">
     </form>
+
+    <form method = "POST">
+        <input type = "submit" value="More artefacts related by date" name="add_date">
+    </form>
+	
+	<form method = "POST">
+    <input type = "submit" value="More artefacts related by discovery location" name="add_pos">
+    </form>
+
+    <form action="cart.php">
+        <input type = "submit" value="View cart" name = "cart">
+    </form>
+
+</div>	
+
+	
+<div class = "responsive">	
+	
     <?php
         if(isset($_POST['add'])){
             $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
@@ -60,11 +83,8 @@ if(isset($_SESSION['usr_id']))
             }
         }
     ?>
-</div>
-<div class="responsive">
-    <form method = "POST">
-        <input type = "submit" value="More artefacts related by date" name="add_date">
-    </form>
+	
+	
     <?php
         if(isset($_POST['add_date'])){
             $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
@@ -78,7 +98,7 @@ if(isset($_SESSION['usr_id']))
             if ($mysqli->query($sql_query)) {
                 $result = $mysqli->query($sql_query);
                 while($row = mysqli_fetch_row($result)){
-                    echo '<div class="responsive"><div class="gallery"><a target="_blank" href=""><img src="'.$row[0].'" width="300" height="200"></a><div class="desc">'.$row[1].'</div><div class="desc">Date: '.$row[2].'</div><div class="desc">Discovery location: '.$row[3].'</div></div></div>';
+                    echo '<div class="responsive"><div class="singleArtefact2"><a target="_blank" href=""><img src="'.$row[0].'" width="300" height="200"></a><div class="desc">'.$row[1].'</div><div class="desc">Date: '.$row[2].'</div><div class="desc">Discovery location: '.$row[3].'</div></div></div>';
                 }
                 $result->close();
             } else {
@@ -87,11 +107,7 @@ if(isset($_SESSION['usr_id']))
             }
         }
     ?>
-</div>
-<div class="responsive">
-    <form method = "POST">
-        <input type = "submit" value="More artefacts related by discovery location" name="add_pos">
-    </form>
+
     <?php
         if(isset($_POST['add_date'])){
             $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
@@ -105,7 +121,7 @@ if(isset($_SESSION['usr_id']))
             if ($mysqli->query($sql_query)) {
                 $result = $mysqli->query($sql_query);
                 while($row = mysqli_fetch_row($result)){
-                    echo '<div class="responsive"><div class="gallery"><a target="_blank" href=""><img src="'.$row[0].'" width="300" height="200"></a><div class="desc">'.$row[1].'</div><div class="desc">Date: '.$row[2].'</div><div class="desc">Discovery location: '.$row[3].'</div></div></div>';
+                    echo '<div class="responsive"><div class="singleArtefact2"><a target="_blank" href=""><img src="'.$row[0].'" width="300" height="200"></a><div class="desc">'.$row[1].'</div><div class="desc">Date: '.$row[2].'</div><div class="desc">Discovery location: '.$row[3].'</div></div></div>';
                 }
                 $result->close();
             } else {
@@ -116,9 +132,4 @@ if(isset($_SESSION['usr_id']))
     ?>
 </div>
 
-<div>
-    <form action="cart.php">
-        <input type = "submit" value="View cart" name = "cart">
-    </form>
-</div>
 <?php require VIEW_ROOT . '/template/footer.php'; 
